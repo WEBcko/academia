@@ -11,3 +11,7 @@ Route::get('/', function () {
 
 Route::get('/users', [UserController::class, 'index']);
 Route::get('/register', [RegisterController::class, 'index']);
+
+Route::get('/contato', function(){
+    return view('site.contact');
+});
