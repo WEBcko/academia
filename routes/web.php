@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\Login\RegisterController;
 
 
 Route::get('/', function () {
@@ -9,3 +10,4 @@ Route::get('/', function () {
 });
 
 Route::get('/users', [UserController::class, 'index']);
+Route::get('/register', [RegisterController::class, 'index']);
