@@ -20,5 +20,11 @@ Route::get('/', function () {
 
 Route::get('/users', [UserController::class, 'index']);
 Route::get('/register', [RegisterController::class, 'index']);
+Route::get('/sidebarLayout', function(){
+
+    return view('layout.sidebar');
+});
+
 Route::get('/home', [SiteController::class, 'action']);
 Route::get('/login',[RegisterController::class, 'logar']);
+
