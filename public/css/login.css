@@ -1,0 +1,70 @@
+*{
+    font-family: roboto;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    color: blue;
+}
+
+
+input{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 90vw;
+    height: 90vh;
+    /* max-width: 960px; */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #3a030300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.login-div{
+    background-color: rgba(38, 255, 0, 0);
+    /* width: 50%; */
+    /* height: 70%; */
+    /* so descomentar os width e height acima pra tudo coltar ao normal */
+    width: 500px;
+    height: 728px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    background-image: url(../img/walter.jpg);
+}
+
+.titulo{
+    text-align: center;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.content{
+    background-color: rgba(10, 246, 246, 0);
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

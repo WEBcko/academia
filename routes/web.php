@@ -3,15 +3,22 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Login\RegisterController;
-
+use App\Http\Controllers\Site\SiteController;
 
 Route::get('/', function () {
-    return view('welcome');
+    $nome = 'romario';
+    $idade = 23;
+    $arr = [10,20,30,40,55];
+
+    return view('welcome',
+        [
+            'nome' => $nome,
+            'idade' => $idade,
+            'arr' => $arr
+        ]);
 });
 
 Route::get('/users', [UserController::class, 'index']);
 Route::get('/register', [RegisterController::class, 'index']);
-
-Route::get('/contato', function(){
-    return view('site.contact');
-});
+Route::get('/home', [SiteController::class, 'action']);
+Route::get('/login',[RegisterController::class, 'logar']);
