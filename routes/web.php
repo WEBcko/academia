@@ -15,3 +15,8 @@ Route::get('/register', [RegisterController::class, 'index']);
 Route::get('/contato', function(){
     return view('site.contact');
 });
+
+Route::get('/sidebarLayout', function(){
+
+    return view('layout.sidebar');
+});
