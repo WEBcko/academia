@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="css/sidebar.css">
 
     <script src="https://kit.fontawesome.com/9ede36cb5d.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+
+    <title>@yield('title')</title>
+    
+
 </head>
 <body>
+    
     <!--SIDEBAR-->
     <nav class="side_bar">
         <ul class="categorias">
@@ -62,7 +66,7 @@
         <ul class="nav-bar">
 
             <li class ="option">
-                <a href="Home">ALUNOS</a>
+                <a href="Home">@yield('nome_da_pagina')</a>
             </li>
 
             <li class ="option">
@@ -73,6 +77,6 @@
         </ul>
     </header>
 
-
+    @yield('content')
 </body>
 </html>

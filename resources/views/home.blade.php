@@ -1,9 +1,10 @@
-@extends('layouts.homelayout')
+@extends('layout.sidebar')
 
-@section('title', 'pagina de teste')
+@section('title', 'Alunos')
+@section('nome_da_pagina', 'ALUNOS')
 
 @section('content')
 
-<p>ola manito</p>
+
 
 @endsection
