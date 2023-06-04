@@ -7,7 +7,6 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\GrupoMuscularController;
 
 Route::get('/', function () {
-    return view('welcome');
 });
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
@@ -18,6 +17,12 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 
 Route::get('/users', [UserController::class, 'index']);
 Route::get('/register', [RegisterController::class, 'index']);
+
+Route::get('/sidebarLayout', [RegisterController::class, 'index']);
+//HOME CONTROLLER^^
+
+Route::get('/home', [SiteController::class, 'action']);
+Route::get('/login',[RegisterController::class, 'logar']);
 
 
 Route::get('/grupo', [GrupoMuscularController::class, 'index'])->name('grupo');
