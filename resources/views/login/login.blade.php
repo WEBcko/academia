@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
-    <script src="js/index.js"></script>
-    <title>@yield('title')</title>
-</head>
-<body>
+@extends('layout.sidebar')
+
+@section('title', 'Login')
+
+@section('content')
     <section class="container">
         <div class="login-div">
             <div class="titulo">
@@ -31,5 +25,4 @@
         </div>
     </section>
     <p>Walter &copy; 2023</p>
-</body>
-</html>
+@endsection
