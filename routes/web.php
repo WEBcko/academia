@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\GrupoMuscularController;
+use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
 });
@@ -18,8 +19,8 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 Route::get('/users', [UserController::class, 'index']);
 Route::get('/register', [RegisterController::class, 'index']);
 
-Route::get('/sidebarLayout', [RegisterController::class, 'index']);
-//HOME CONTROLLER^^
+// Route::get('/sidebarLayout', [RegisterController::class, 'index']);
+// //HOME CONTROLLER^^
 
 Route::get('/home', [SiteController::class, 'action']);
 Route::get('/login',[RegisterController::class, 'logar']);
@@ -30,3 +31,5 @@ Route::get('/grupo', [GrupoMuscularController::class, 'index'])->name('grupo');
 Route::get('/contato', function(){
     return view('site.contact');
 });
+Route::get('/sidebar', [HomeController::class, 'index'])->name ('sidebar.index');
+

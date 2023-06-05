@@ -8,6 +8,8 @@
 
     <script src="https://kit.fontawesome.com/9ede36cb5d.js" crossorigin="anonymous"></script>
 
+    @section('title', 'SideBar')
+    @section('nome_da_pagina', 'SIDEBAR')
     <title>@yield('title')</title>
     
 
@@ -56,7 +58,7 @@
             <li class ="category_opc">
             <a class ="category_button" href="#">
                     <i class ="fa-solid fa-gear"></i>
-                    <span>CONFIGURACA</span>
+                    <span>CONFIGURAÇÃO</span>
                 </a>
             </li>
         </ul>
