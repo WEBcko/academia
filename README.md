@@ -1,6 +1,5 @@
 <p align="center"><a href="" target="_blank"><img src="public\css\Group 22LOGO.png" width="400" alt="Laravel Logo"></a></p>
 
-a
 ## Sobre GYMcko
 
 O GYMcko é uma aplicação web desenvolvida para auxiliar no gerenciamento de uma academia. Com o GYMcko, você pode facilmente cadastrar alunos, funcionários, registrar treinos, gerenciar as finanças e muito mais. A seguir, apresentamos os principais recursos e funcionalidades do GYMcko.
@@ -17,8 +16,6 @@ O GYMcko é uma aplicação web desenvolvida para auxiliar no gerenciamento de u
 - Agendamento de Aulas: Permita que os alunos agendem aulas ou treinamentos específicos com os instrutores disponíveis.
 
 - Relatórios e Estatísticas: Gere relatórios e estatísticas sobre a frequência dos alunos, desempenho dos treinos, receitas e outras métricas importantes.
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
 ###Tecnologias Utilizadas
 
