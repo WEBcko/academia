@@ -1,4 +1,4 @@
-<p align="center"><a href="" target="_blank"><img src="https://github.com/WEBcko/academia/blob/Developer/public/img/Group_15LOGO_ACADEMIA-removebg-preview%201.png" width="400" height="200" alt="Academia Logo"></a></p>
+<p align="center"><a href="" target="_blank"><img src="https://github.com/WEBcko/academia/blob/Developer/public/img/Group_15LOGO_ACADEMIA-removebg-preview%201.png" width="100" alt="Academia Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
