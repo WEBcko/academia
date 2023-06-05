@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('configuracaos', function (Blueprint $table) {
             $table->id();
+            $table->boolean('ativo')->default(0);
             $table->timestamps();
         });
     }
