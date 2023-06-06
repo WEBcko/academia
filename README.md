@@ -4,7 +4,7 @@
 
 O GYMcko é uma aplicação web desenvolvida para auxiliar no gerenciamento de uma academia. Com o GYMcko, você pode facilmente cadastrar alunos, funcionários, registrar treinos, gerenciar as finanças e muito mais. A seguir, apresentamos os principais recursos e funcionalidades do GYMcko.
 
-###Funcionalidades
+### Funcionalidades
 - Cadastro de Alunos: Registre informações dos alunos, como nome, idade, contato,  histórico de saúde, entre outros.
 
 - Cadastro de Funcionários: Mantenha um registro dos funcionários da academia, incluindo nome, função, horário de trabalho, entre outros detalhes.
@@ -17,7 +17,7 @@ O GYMcko é uma aplicação web desenvolvida para auxiliar no gerenciamento de u
 
 - Relatórios e Estatísticas: Gere relatórios e estatísticas sobre a frequência dos alunos, desempenho dos treinos, receitas e outras métricas importantes.
 
-###Tecnologias Utilizadas
+### Tecnologias Utilizadas
 
 - **Laravel**: Framework PHP acessível e poderoso para o desenvolvimento web.
 
@@ -29,7 +29,7 @@ O GYMcko é uma aplicação web desenvolvida para auxiliar no gerenciamento de u
 
 - **JavaScript**: Linguagem de programação utilizada para adicionar interatividade e funcionalidades adicionais ao GYMcko.
 
-###Como Executar a Aplicação
+### Como Executar a Aplicação
 
 Para executar a aplicação GYMcko, siga as etapas abaixo:
 
