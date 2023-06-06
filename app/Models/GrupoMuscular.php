@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Exercicios;
 
 class GrupoMuscular extends Model
 {
@@ -12,5 +13,9 @@ class GrupoMuscular extends Model
     protected $fillable = [
         'name'
     ];
+
+    public function exercicios(){
+        return $this->hasMany(Exercicio::class);
+    }
 
 }
