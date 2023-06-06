@@ -1,4 +1,4 @@
-<p align="center"><a href="" target="_blank"><img src="public\css\Group 22LOGO.png" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="" target="_blank"><img src="public\img\Group 25LOGO GYMCKO.png" width="400" alt="gymcko"></a></p>
 
 ## Sobre GYMcko
 
@@ -34,7 +34,6 @@ O GYMcko é uma aplicação web desenvolvida para auxiliar no gerenciamento de u
 Para executar a aplicação GYMcko, siga as etapas abaixo:
 
 1. Clone o Repositorio GYMcko: ```git clone https://github.com/seu-usuario/gymcko.git``` 
-
 2. Navegue até o diretório do projeto: ```cd gymcko```
 3. Instale as dependências do Laravel utilizando o Composer: ```composer install```
 4. Instale as dependências do Vue.js utilizando o npm ou yarn: ```npm install``` ou ```yarn install```
