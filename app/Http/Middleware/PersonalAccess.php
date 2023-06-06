@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class AdminAccess
+class PersonalAccess
 {
     /**
      * Handle an incoming request.
@@ -15,9 +15,10 @@ class AdminAccess
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(auth()->check() AND auth()->user()->admin){
+        if(auth()->check() AND auth()->user()->personal){
         return $next($request);
         }
-        dd('Você não é ADM');
+        dd('Você não é Personal');
+
     }
 }

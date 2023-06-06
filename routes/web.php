@@ -9,6 +9,7 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
 });
+Route::get('/home', [HomeController::class, 'index'])->name ('home.index');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login/act', [LoginController::class, 'act'])->name('login.act');
@@ -19,11 +20,11 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 Route::get('/users', [UserController::class, 'index']);
 Route::get('/register', [RegisterController::class, 'index']);
 
-// Route::get('/sidebarLayout', [RegisterController::class, 'index']);
-// //HOME CONTROLLER^^
 
-Route::get('/home', [SiteController::class, 'action']);
-Route::get('/login',[RegisterController::class, 'logar']);
+
+// Route::get('/login', function(){
+//     Route::get('/login',[RegisterController::class, 'logar']);
+// })->middleware(AdminAccess::class, PersonalAccess::class);
 
 
 Route::get('/grupo', [GrupoMuscularController::class, 'index'])->name('grupo');
@@ -31,5 +32,5 @@ Route::get('/grupo', [GrupoMuscularController::class, 'index'])->name('grupo');
 Route::get('/contato', function(){
     return view('site.contact');
 });
-Route::get('/sidebar', [HomeController::class, 'index'])->name ('sidebar.index');
+
 
