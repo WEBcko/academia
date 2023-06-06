@@ -14,6 +14,11 @@ return new class extends Migration
         Schema::create('treino_exercicios', function (Blueprint $table) {
             $table->id();
             $table->boolean('ativo')->default(0);
+            $table->foreignId('treino_id')->constrained('treinos');
+            $table->foreignId('exercicio_id')->constrained('exercicios');
+            $table->string('dificuldade');
+            $table->decimal('peso');
+            $table->integer('repeticoes');
             $table->timestamps();
         });
     }

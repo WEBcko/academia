@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('grupo_musculars', function (Blueprint $table) {
+        Schema::create('grupo_musculares', function (Blueprint $table) {
             $table->id();
             $table->boolean('ativo')->default(0);
-            $table->string('name');
+            $table->string('nome');
             $table->timestamps();
         });
     }
