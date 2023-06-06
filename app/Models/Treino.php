@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Treino extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'codigo_ordem' => 'string'
+    ];
+
+    protected $casts = [
+        'codigo_ordem' => 'string'
+    ];
 }
