@@ -4,7 +4,7 @@
 @section('nome_da_pagina', 'ALUNOS')
 
 @section('content')
-
+    
 
 
 @endsection
