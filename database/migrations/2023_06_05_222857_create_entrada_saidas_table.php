@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('entrada_saidas', function (Blueprint $table) {
             $table->id();
             $table->boolean('ativo')->default(0);
+            $table->dateTime('hora_entrada');
+            $table->dateTime('hora_saida');
+            $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
     }

@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\GrupoMuscularController;
 use App\Http\Controllers\HomeController;
 
+
 Route::get('/', function () {
 });
 
