@@ -15,9 +15,13 @@ class ClienteAccess
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(auth()->check() AND auth()->user()->client){
-        return $next($request);
+        //Faz a verificação se o usuario ele nao esta autenticado e se ele não é o CLIENTE=2, caso contrario, retorna a home
+        if(!auth()->check() || auth()->user()->role != 2){
+            return redirect()->route('home');
+            
         }
-        dd('Você não é um Cliente.');
+        return $next($request);
+
+        dd('Você é um Cliente.');
     }
 }

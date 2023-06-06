@@ -15,9 +15,11 @@ class AdminAccess
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(auth()->check() AND auth()->user()->admin){
-        return $next($request);
+        //Faz a verificação se o usuario ele nao esta autenticado e se ele não é o ADM=0, caso contrario, retorna a home
+        if(!auth()->check() || auth()->user()->role != 0){
+            return redirect()->route('home');
         }
-        dd('Você não é ADM');
+        return $next($request);
+        dd('Você é ADM');
     }
 }

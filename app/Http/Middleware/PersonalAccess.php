@@ -15,10 +15,13 @@ class PersonalAccess
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(auth()->check() AND auth()->user()->personal){
-        return $next($request);
+        //Faz a verificação se o usuario ele nao esta autenticado e se ele não é o PERSONAL=1, caso contrario, retorna a home
+        if(!auth()->check() || auth()->user()->role != 1){
+            return redirect()->route('home');
         }
-        dd('Você não é Personal');
+        return $next($request);
+
+        dd('Você é Personal');
 
     }
 }

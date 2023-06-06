@@ -6,10 +6,18 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\GrupoMuscularController;
 use App\Http\Controllers\HomeController;
+use App\Http\Middleware\AdminAccess;
 
 Route::get('/', function () {
 });
-Route::get('/home', [HomeController::class, 'index'])->name ('home.index');
+
+Route::get('/home', [HomeController::class, 'index'])->name ('home');
+
+//NÃO APAGAR: Função para adicionar o middleware em um grupo de rotas
+// Route::get('/login', function(){
+// Route::get('/login', [LoginController::class, 'index'])->name('login');
+// Route::post('/login/act', [LoginController::class, 'act'])->name('login.act');
+// })->middleware(AdminAccess::class,PersonalAccess::class); Onde chamamos a class dos middlewares desejados (pode ser mais de um em um grupo de rotas)
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login/act', [LoginController::class, 'act'])->name('login.act');
