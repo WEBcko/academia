@@ -16,7 +16,8 @@ return new class extends Migration
             $table->boolean('ativo')->default(0);
             $table->dateTime('hora_entrada');
             $table->dateTime('hora_saida');
-            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('cliente_id')->constrained('users');
+            $table->foreignId('personal_id')->constrained('users');
             $table->timestamps();
         });
     }
