@@ -3,11 +3,12 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\GrupoMuscular;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Exercicio>
  */
-class ExerciciosFactory extends Factory
+class ExercicioFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +18,7 @@ class ExerciciosFactory extends Factory
     public function definition(): array
     {
         return [
-            'grupo_muscular_id' => $this::pluck('id')->random,
+            'grupo_muscular_id' => GrupoMuscular::pluck('id')->random(),
             'nome' => $this->faker->unique()->word,
         ];
     }

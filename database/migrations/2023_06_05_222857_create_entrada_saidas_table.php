@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('entrada_saidas', function (Blueprint $table) {
             $table->id();
-            $table->boolean('ativo')->default(0);
+            $table->boolean('ativo')->default(1);
             $table->dateTime('hora_entrada');
             $table->dateTime('hora_saida');
             $table->foreignId('cliente_id')->constrained('users');

@@ -17,7 +17,6 @@ class Configuracao extends Model
 
     //ele faz o cast do dado a ser inserido
     protected $casts = [
-        'horario_funcionamento' => 'time',
         'ocupacao' => 'integer'
     ];
 }
