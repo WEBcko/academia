@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class ClienteAccess
+class ClienteAccess extends Middleware
 {
     /**
      * Handle an incoming request.

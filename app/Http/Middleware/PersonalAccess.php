@@ -6,8 +6,8 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class PersonalAccess
-{
+class PersonalAccess extends Middleware
+{ 
     /**
      * Handle an incoming request.
      *
