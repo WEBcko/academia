@@ -13,8 +13,12 @@ class TreinoSeeder extends Seeder
      */
     public function run(): void
     {
-        Treino::create([
+        //cria varios
+        //Treino::factory(5)->create();
 
+        //Cria apenas um
+        Treino::create([
+            'ativo' => '1',
             'codigo_ordem' => '1',
         ]);
     }

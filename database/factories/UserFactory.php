@@ -3,10 +3,9 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
-
+use Illuminate\Support\Facades\Hash;
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
 class UserFactory extends Factory
 {
@@ -17,22 +16,20 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
-        return [
-            'name' => fake()->name(),
-            'email' => fake()->unique()->safeEmail(),
-            'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-            'remember_token' => Str::random(10),
-        ];
-    }
+        $nome = $this->faker->unique()->word;
 
-    /**
-     * Indicate that the model's email address should be unverified.
-     */
-    public function unverified(): static
-    {
-        return $this->state(fn (array $attributes) => [
-            'email_verified_at' => null,
-        ]);
+        return [
+            'role' => $this->faker->numberBetween($min = 1, $max = 2),
+            'nome' => $nome,
+            'email' => $nome.'@WEBcko.com',
+            'password'=> Hash::make($this->faker->password),
+            'telefone' => $this ->faker->numerify('#######-####'),
+            'cpf' => $this ->faker->numerify('###.###.###-##'),
+            'peso' => $this-> faker->unique()->numberBetween($min = 50, $max = 200),
+            'altura' => $this-> faker->unique()->numberBetween($min = 100, $max = 220),
+            'cep' =>$this->faker->numerify('#####-###'),
+            'numero_casa' =>$this->faker->numberBetween($min = 1, $max = 900),
+            'data_nascimento' =>$this->faker->dateTimeThisMonth()->format('Y-m-d H:i:s'),
+        ];
     }
 }

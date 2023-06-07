@@ -12,7 +12,7 @@ class Exercicio extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nome'
+        'nome' =>'string'
     ];
 
     protected $casts = [
