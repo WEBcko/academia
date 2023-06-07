@@ -14,13 +14,13 @@ class GrupoMuscularSeeder extends Seeder
     public function run(): void
     {
          //CRIA VARIAS UNIDADE COM NAME ALEATORIO
-        GrupoMuscular::factory(5)->create();
+        //GrupoMuscular::factory(5)->create();
 
 
         //CRIAR UMA UNICA UNIDADE COM UM NAME DEFINIDO
-        // GrupoMuscular::create([
-        //     'ativo' => '1',
-        //     'nome' => 'perna'
-        // ]);
+        GrupoMuscular::create([
+            'ativo' => '1',
+            'nome' => 'perna'
+        ]);
     }
 }

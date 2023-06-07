@@ -14,7 +14,7 @@ class TreinoExercicioSeeder extends Seeder
     public function run(): void
     {
         //CRIA VARIOS 
-        TreinoExercicio::factory(5)->create();
+        //TreinoExercicio::factory(5)->create();
 
 
         //CRIA UM UNICO TREINO EXERCICIO
@@ -23,7 +23,7 @@ class TreinoExercicioSeeder extends Seeder
             'treino_id' => '1',
             'exercicio_id' => '1',
             'dificuldade' => 'facil',
-            'peso' => '20Kg',
+            'peso' => '20',
             'repeticoes' => '6'
         ]);
     }
