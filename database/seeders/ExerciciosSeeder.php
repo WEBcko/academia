@@ -14,12 +14,12 @@ class ExerciciosSeeder extends Seeder
     public function run(): void
     {
         //CRA VARUAS UNIDADES
-        //Exercicio::factory(3)->create();    
+        Exercicio::factory(10)->create();
 
         //CRIA APENAS UMA UNIDADE
-        Exercicio::create([
-            'grupo_muscular_id' => '1',
-            'nome' => 'agachamento'
-        ]);
+        // Exercicio::create([
+        //     'grupo_muscular_id' => '1',
+        //     'nome' => 'agachamento'
+        // ]);
     }
 }
