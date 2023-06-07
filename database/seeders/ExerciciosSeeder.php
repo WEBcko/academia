@@ -18,6 +18,7 @@ class ExerciciosSeeder extends Seeder
 
         //CRIA APENAS UMA UNIDADE
         // Exercicio::create([
+        //     'ativo' => '1',
         //     'grupo_muscular_id' => '1',
         //     'nome' => 'agachamento'
         // ]);

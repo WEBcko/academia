@@ -14,7 +14,7 @@ class ConfiguracaoSeeder extends Seeder
     public function run(): void
     {
         Configuracao::create([
-            
+            'ativo' => '1',
             'horario_funcionamento' => '09:10:00',
             'ocupacao' => '10'
 

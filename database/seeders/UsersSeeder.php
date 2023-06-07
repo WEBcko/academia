@@ -13,8 +13,12 @@ class UsersSeeder extends Seeder
      */
     public function run(): void
     {
-        User::create([
+        //PARA CRIAR VARIOS!!!
+        User::factory(5)->create();
 
+        //PARA CRIAR APENAS UM USUARIO ESPECIFICO
+        User::create([
+            'ativo' => '1',
             'role' => '1',
             'nome' => 'Emilio Anastacio',
             'email' => 'emilio@WEBcko.com',

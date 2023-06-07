@@ -19,6 +19,7 @@ class GrupoMuscularSeeder extends Seeder
 
         //CRIAR UMA UNICA UNIDADE COM UM NAME DEFINIDO
         // GrupoMuscular::create([
+        //     'ativo' => '1',
         //     'nome' => 'perna'
         // ]);
     }

@@ -17,6 +17,7 @@ class GrupoMuscularFactory extends Factory
     public function definition(): array
     {
         return [
+            'ativo' => '1',
             'nome' => $this->faker->unique()->word,
         ];
     }

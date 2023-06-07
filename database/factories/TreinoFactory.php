@@ -3,24 +3,27 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\GrupoMuscular;
 
+$contador = 0;
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Exercicio>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Treino>
  */
-class ExercicioFactory extends Factory
+class TreinoFactory extends Factory
 {
     /**
      * Define the model's default state.
      *
      * @return array<string, mixed>
      */
+
+    
+
     public function definition(): array
     {
+        $contador ++;
         return [
             'ativo' => '1',
-            'grupo_muscular_id' => GrupoMuscular::pluck('id')->random(),
-            'nome' => $this->faker->unique()->word,
+            'codigo_ordem' => $contador,
         ];
     }
 }
