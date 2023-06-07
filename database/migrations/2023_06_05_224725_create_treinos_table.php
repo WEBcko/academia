@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('treinos', function (Blueprint $table) {
             $table->id();
-            $table->boolean('ativo')->default(0);
+            $table->boolean('ativo')->default(1);
             $table->string('codigo_ordem');
             $table->timestamps();
         });

@@ -16,7 +16,7 @@ class UsersSeeder extends Seeder
         User::create([
 
             'role' => '1',
-            'name' => 'Emilio Anastacio',
+            'nome' => 'Emilio Anastacio',
             'email' => 'emilio@WEBcko.com',
             'password' => Hash::create('12345'),
             'telefone' => '459991-2399',

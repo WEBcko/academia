@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('treino_exercicios', function (Blueprint $table) {
             $table->id();
-            $table->boolean('ativo')->default(0);
+            $table->boolean('ativo')->default(1);
             $table->foreignId('treino_id')->constrained('treinos');
             $table->foreignId('exercicio_id')->constrained('exercicios');
             $table->string('dificuldade');
