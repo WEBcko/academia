@@ -23,7 +23,6 @@ Route::get('/register', [RegisterController::class, 'index']);
 // Route::get('/sidebarLayout', [RegisterController::class, 'index']);
 // //HOME CONTROLLER^^
 
-Route::get('/home', [SiteController::class, 'action']);
 Route::get('/login',[RegisterController::class, 'logar']);
 
 

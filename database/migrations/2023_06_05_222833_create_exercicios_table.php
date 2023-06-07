@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('exercicios', function (Blueprint $table) {
             $table->id();
             $table->boolean('ativo')->default(0);
-            $table->foreignId('grupo_muscular_id')->constrained('grupo_musculares');
+            $table->foreignId('grupo_muscular_id')->constrained('grupo_musculars');
             $table->string('nome');
             $table->timestamps();
         });
