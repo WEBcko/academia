@@ -1,5 +1,6 @@
 *{
     font-family: roboto;
+
 }
 
 body{
@@ -13,7 +14,7 @@ h1{
 
 
 input{
-    width: 100%;
+    width: 90%;
     margin-bottom: 10px;
     
 }
@@ -25,47 +26,83 @@ a{
 .container{
     width: 90vw;
     height: 90vh;
-    /* max-width: 960px; */
     margin: 0 auto;
     padding: 20px;
-    background-color: #3a030300;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(31, 108, 175);
+    justify-content: space-evenly;
 }
 
 
-.login-div{
-    background-color: rgba(38, 255, 0, 0);
-    /* width: 50%; */
-    /* height: 70%; */
-    /* so descomentar os width e height acima pra tudo coltar ao normal */
-    width: 500px;
-    height: 728px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid black;
-    background-image: url(../img/walter.jpg);
+.login-form{
+    width: 60%;
+    background-color: aqua;
+    height: 30%;
+    padding: 5px;
 }
 
-.titulo{
-    text-align: center;
-}
-
-.input {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.content{
-    background-color: rgba(10, 246, 246, 0);
+.div-login-form{
     width: 50%;
-    height: 50%;
+    height: 90%;
+    background-color: #39b57b;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
+
+
+.div-cadastro-form{
+    width: 80%;
+    height: 90%;
+    background-color: #4f4fa7;
+    display: flex;
+    align-items: center;
+}
+.cadastro-form{
+    /* display: none; */
+    background-color:brown;
+    padding: 5px;
+}
+
+.tabs{
+    display: flex;
+    flex-wrap: wrap;
+    width: 380px;
+}
+
+.tabs label{
+    order: 1;
+    display: block;
+    padding: 10px 15px;
+    margin-right: 0.2rem;
+    cursor: pointer;
+    background-color: yellow;
+    font-weight: bold;
+    transition: background ease 0.3s;
+}
+
+.tabs .tab{
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    height: 280px;
+    display: none;
+    padding: 1rem;
+    background-color: #fff;
+}
+
+.tabs input[type="radio"]{
+    display: none;
+}
+
+.tabs input[type="radio"]:checked+label{
+    background-color: #fff;
+}
+
+.tabs input[type="radio"]:checked+label+.tab{
+    display:block;
+}
+
+
+
