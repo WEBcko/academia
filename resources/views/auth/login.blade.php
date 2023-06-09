@@ -29,31 +29,35 @@
                 @csrf
                 <div class="div-teste-cadastro">
                     <h2>cadastro</h2>
-                        <ul>
-                            <li class="dados">Dados Pessoais</li>
-                            <li class="endereco">Endereço</li>
-                            <li class="login">Login</li>
-                        </ul>
+                        <div class="tabs">
+                            <input type="radio" name="tabs" id="tabone" checked="checked">
+                            <label for="tabone">Dados pessoais</label>
+                            <div class="tab">
+                                    <div class="campo-dados">
+                                        <input type="text" name="nome" id="nome" placeholder="nome">
+                                        <input type="email" name="email" id="email" placeholder="email">
 
-                    <div class="campo-dados">
-                    <input type="text" name="nome" id="nome" placeholder="nome">
-                    <input type="email" name="email" id="email" placeholder="email">
-
-                    </div>
-                    <div>
-                        <input type="text" name="rua" id="rua" placeholder="rua">
-                        <input type="text" name="cep" id="cep" placeholder="cep">
-                        <input type="text" name="num_casa" id="num_casa" placeholder="num casa">
-                    </div>
-                    <div class="campo-login">
-                        <input type="password" name="password" id="senha" placeholder="senha">
-                        <input type="password_again" name="password_again" id="password_again" placeholder="senha novamente">
-                    </div>
-
-
-
-                    <button type="submit">Login</button>
-                    <button>Confirmar cadastro</button>
+                                    </div>
+                                </div>
+                            <input type="radio" name="tabs" id="tabtwo">
+                            <label for="tabtwo">Endereco</label>
+                            <div class="tab">
+                                <div>
+                                    <input type="text" name="rua" id="rua" placeholder="rua">
+                                    <input type="text" name="cep" id="cep" placeholder="cep">
+                                    <input type="text" name="num_casa" id="num_casa" placeholder="num casa">
+                                </div>
+                            </div>
+                            <input type="radio" name="tabs" id="tabthree">
+                            <label for="tabthree">Login</label>
+                            <div class="tab">
+                                <div class="campo-login">
+                                    <input type="password" name="password" id="senha" placeholder="senha">
+                                    <input type="password_again" name="password_again" id="password_again" placeholder="senha novamente">
+                                </div>
+                                <button>Confirmar cadastro</button>
+                            </div>
+                        </div>
                 </div>
             </form>
         </div>

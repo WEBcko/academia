@@ -1,6 +1,6 @@
 *{
     font-family: roboto;
-    
+
 }
 
 body{
@@ -20,25 +20,6 @@ input{
 
 a{
     text-decoration: none;
-}
-
-ul{
-    list-style: none;
-    display: flex;
-    width: 100%;
-    padding: 0px;
-}
-
-li{
-    color: white;
-    border: 1px solid black;
-    width: 50%;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-}
-
-li:hover{
-    opacity: 0.5;
 }
 
 .container{
@@ -82,4 +63,45 @@ li:hover{
     background-color:brown;
     padding: 5px;
 }
+
+.tabs{
+    display: flex;
+    flex-wrap: wrap;
+    width: 380px;
+}
+
+.tabs label{
+    order: 1;
+    display: block;
+    padding: 10px 15px;
+    margin-right: 0.2rem;
+    cursor: pointer;
+    background-color: yellow;
+    font-weight: bold;
+    transition: background ease 0.3s;
+}
+
+.tabs .tab{
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    height: 280px;
+    display: none;
+    padding: 1rem;
+    background-color: #fff;
+}
+
+.tabs input[type="radio"]{
+    display: none;
+}
+
+.tabs input[type="radio"]:checked+label{
+    background-color: #fff;
+}
+
+.tabs input[type="radio"]:checked+label+.tab{
+    display:block;
+}
+
+
 
