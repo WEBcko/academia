@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Grupo Muscular</title>
-</head>
-<body>
-    <h1>{{ $asd }}</h1>
+@extends('layout.sidebar')
 
-    <table>
+@section('title', 'Grupo Muscular')
+@section('nome_da_pagina', 'Grupo Muscular')
+
+@section('content')
+
+    <a href="{{route('grupo.create')}}">NOVO</a>
+
+  <table>
         <thead>
             <tr>
                 <th>ID</th>
@@ -21,11 +19,17 @@
             @foreach ($dados as $dado)
                 <tr>
                     <td>{{$dado->id}}</td>
-                    <td>{{$dado->name}}</td>
+                    <td>{{$dado->nome}}</td>
+                    <td>
+                        <a href="{{route('grupo.edit', ['id' => $dado->id])}}">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </a>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
     </table>
 
-</body>
-</html>
+
+@endsection
+

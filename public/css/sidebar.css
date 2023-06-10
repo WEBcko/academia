@@ -16,6 +16,10 @@ body{
     background-color: #fafafa;
 }
 
+.container{
+    margin-left: 6vw;
+}
+
 /* header{
     background-color: rgb(63, 60, 60);
     width: 100vw;
