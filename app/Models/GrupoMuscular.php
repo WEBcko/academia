@@ -11,7 +11,8 @@ class GrupoMuscular extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name'
+        'nome',
+        'ativo'
     ];
 
     public function exercicios(){

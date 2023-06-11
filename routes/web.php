@@ -42,11 +42,16 @@ Route::get('/register', [RegisterController::class, 'index']);
 //     Route::get('/login',[RegisterController::class, 'logar']);
 // })->middleware(AdminAccess::class, PersonalAccess::class);
 
-
-Route::get('/grupo', [GrupoMuscularController::class, 'index'])->name('grupo');
-
 Route::get('/contato', function(){
     return view('site.contact');
 });
 
 
+Route::prefix('grupo')->controller(GrupoMuscularController::class)->name('grupo.')->group(function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/create', 'create')->name('create');
+    Route::post('/store', 'store')->name('store');
+    Route::get('/edit/{id}', 'edit')->name('edit');
+    Route::put('/update/{id}', 'update')->name('update');
+    Route::delete('/destroy/{id}', 'destroy')->name('destroy');
+});
