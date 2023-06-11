@@ -53,6 +53,5 @@ Route::prefix('grupo')->controller(GrupoMuscularController::class)->name('grupo.
     Route::post('/store', 'store')->name('store');
     Route::get('/edit/{id}', 'edit')->name('edit');
     Route::put('/update/{id}', 'update')->name('update');
+    Route::delete('/destroy/{id}', 'destroy')->name('destroy');
 });
-
-

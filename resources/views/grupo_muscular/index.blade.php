@@ -11,6 +11,7 @@
         <thead>
             <tr>
                 <th>ID</th>
+                <th>Status</th>
                 <th>Nome</th>
             </tr>
         </thead>
@@ -19,11 +20,19 @@
             @foreach ($dados as $dado)
                 <tr>
                     <td>{{$dado->id}}</td>
+                    <td>{{$dado->ativo ? "Ativo :)" : "Inativo :("}}</td>
                     <td>{{$dado->nome}}</td>
                     <td>
                         <a href="{{route('grupo.edit', ['id' => $dado->id])}}">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </a>
+                    </td>
+                    <td>
+                        <form action="{{route('grupo.destroy', ['id' => $dado->id])}}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit"><i class="fa-solid fa-trash"></i></button>
+                        </form>
                     </td>
                 </tr>
             @endforeach

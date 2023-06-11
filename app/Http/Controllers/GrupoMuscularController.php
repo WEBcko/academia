@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\GrupoMuscular;
+use App\Models\Exercicio;
 
 class GrupoMuscularController extends Controller
 {
@@ -45,21 +46,29 @@ class GrupoMuscularController extends Controller
         return view('grupo_muscular.edit', compact('data'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Personal $personal)
+    // Dos outros 3 integrantes grupo, casava apenas com um
+    public function update($id)
     {
-        //
+        $data = $this->request->all();
+
+        $updated = $this->model->findOrFail($id)->update($data);
+
+        return redirect()->route('grupo.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Personal $personal)
+    // Função que deletará o grupo muscular, apenas se não possuir um exercicio atrelado, se sim apenas o desativa
+    public function destroy($id, Exercicio $ex)
     {
-        //
-    }
 
+        $exercicios = $ex->where('grupo_muscular_id', $id)->get()->toArray();
+
+        if (empty($exercicios)){
+            $deleted = $this->model->findOrFail($id)->delete();
+        } else {
+            $updated = $this->model->findOrFail($id)->update(['ativo' => false]);
+        }
+
+        return redirect()->route('grupo.index');
+    }
 
 }

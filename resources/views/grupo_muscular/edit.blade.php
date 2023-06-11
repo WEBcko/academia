@@ -5,7 +5,7 @@
 
 @section('content')
 
-    <form action="{{ route('grupo.update', ['id' => $data->id]) }}" method="put">
+    <form action="{{ route('grupo.update', ['id' => $data->id]) }}" method="post">
 
         @csrf
         @method('PUT')
