@@ -22,6 +22,14 @@ a{
     text-decoration: none;
 }
 
+button{
+    width: 150px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid white;
+    font-size: 13px;
+}
+
 .container{
     width: 90vw;
     height: 90vh;
@@ -38,7 +46,7 @@ a{
 .login-form{
     width: 60%;
     background-color: aqua;
-    height: 30%;
+    height: 50%;
     padding: 5px;
 }
 
@@ -57,20 +65,24 @@ a{
     background-color: #4f4fa7;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
+
 .cadastro-form{
     /* display: none; */
     background-color:brown;
     padding: 5px;
+    width: 60%;
+
 }
 
 .tabs{
     display: flex;
     flex-wrap: wrap;
-    width: 380px;
+    width: 100%;
 }
 
-.tabs label{
+.tabs .label-tabs{
     order: 1;
     display: block;
     padding: 10px 15px;
@@ -95,12 +107,51 @@ a{
     display: none;
 }
 
-.tabs input[type="radio"]:checked+label{
-    background-color: #fff;
+.tabs input[type="radio"]:checked+.label-tabs{
+    background-color: #ffffff;
 }
 
-.tabs input[type="radio"]:checked+label+.tab{
+.tabs input[type="radio"]:checked+.label-tabs+.tab{
     display:block;
+}
+
+.ci{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.tab label{
+    font-size: 14px;
+    color: #e00c0c;
+    transition: all 0.3s ease;
+}
+
+.ci input{
+    border: none;
+    border-bottom: 1px solid #888;
+    padding: 5px 0;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.ci input:focus{
+    outline: none;
+    border-color: #333;
+}
+
+/* .ci input:focus+label, .ci input:not(:placeholder-shown) + label{
+    top: -20px;
+    left: 0;
+    font-size: 12px;
+    color: #333;
+} */
+
+.div-teste-login{
+    display: flex;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 
