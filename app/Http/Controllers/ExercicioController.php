@@ -7,59 +7,53 @@ use Illuminate\Http\Request;
 
 class ExercicioController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    public function __construct(Exercicio $exec, Request $request){
+        $this->model = $exec;
+        $this->request = $request;
+    }
+
     public function index()
     {
-        //
+        $dados = $this->model->get();
+        
+        return view('exercicio.index', compact('dados'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        return view('exercicio.new');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        $formData = $this->request->all();
+
+        $created = $this->model->create($formData);
+
+        return redirect()->route('exercicio.index');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Exercicio $exercicio)
+    public function edit($id)
     {
-        //
+        $data = $this->model->findOrFail($id);
+        return view('exercicio.edit', compact('data'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Exercicio $exercicio)
+    public function update($id)
     {
-        //
+        $data = $this->request->all();
+
+        $update = $this->model->findOrFail($id)->update($data);
+
+        return redirect()->route('exercio.index');
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Exercicio $exercicio)
+    public function destroy($id)
     {
-        //
-    }
+        $exercicio = Exercicio::findOrFail($id);
+        
+        $exercicio->delete();
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Exercicio $exercicio)
-    {
-        //
+        return redirect()->route('exercicio.index');
     }
 }
