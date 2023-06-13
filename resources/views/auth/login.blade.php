@@ -16,7 +16,7 @@
                 <h2>login</h2>
                 <div>
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email-login">
                 </div>
                 <div>
                     <label for="senha">Senha</label>
@@ -42,7 +42,7 @@
                                         <label for="nome">Nome</label>
                                         <input type="text" name="nome" id="nome">
                                         <label for="email">Email</label>
-                                        <input type="email" name="email" id="email">
+                                        <input type="email" name="email" id="email-cadastro">
 
                                     </div>
                                 </div>
@@ -73,6 +73,7 @@
                                     <input type="password" name="senha_novamente" id="senha_novamente">
                                 </div>
                                 <button type="submit" class="botao-conf-cadastro bt-c">Confirmar cadastro</button>
+                            
                             </div>
                         </div>
                 </div>
