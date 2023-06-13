@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="css/login.css">
     <title>Login</title>
 </head>
-<body style="background-color:rgb(36, 34, 34)">
+<body>
     <section class="container">
-        <div class="div-login-form">
-            <form action="{{route('login.act')}}" method="post" class="login-form">
+        <div class="div-login-form" id="div-login-form">
+            <form action="{{route('login.act')}}" method="post" class="login-form" id="login-form">
             @csrf
             <div class="div-teste-login ci">
                 <h2>login</h2>
@@ -20,17 +20,17 @@
                 </div>
                 <div>
                     <label for="senha">Senha</label>
-                    <input type="password" name="senha" id="senha">
+                    <input type="password" name="senha" id="senha-login">
                 </div>
-                <div>
-                    <button type="submit" class="botao-login">Login</button>
-                    <button class="botao-cadastrar">Cadastrar</button>
+                <div class="div-button">
+                    <button type="submit" class="botao-login bt-l">Login</button>
+                    <button class="botao-cadastrar bt-l" id="botao-cadastrar" onclick="toggleDivs()">Cadastrar</button>
                 </div>
             </div>
             </form>
         </div>
-        <div class="div-cadastro-form">
-            <form action="" class="cadastro-form">
+        <div class="div-cadastro-form" id="div-cadastro-form">
+            <form action="" class="cadastro-form" id="cadastro-form">
                 @csrf
                 <div class="div-teste-cadastro">
                     <h2>cadastro</h2>
@@ -56,6 +56,10 @@
                                     <input type="text" name="cep" id="cep">
                                     <label for="num_casa">num Casa</label>
                                     <input type="" name="num_casa" id="num_casa">
+                                    <label for="bairro">Bairro</label>
+                                    <input type="text" name="bairro" id="bairro">
+                                    <label for="cidade">Cidade</label>
+                                    <input type="text" name="cidade" id="cidade">
                                 </div>
                             </div>
                             <input type="radio" name="tabs" id="tabthree">
@@ -63,17 +67,18 @@
                             <div class="tab">
                                 <div class="campo-login ci">
                                     <label for="senha">Senha</label>
-                                    <input type="password" name="senha" id="senha">
+                                    <input type="password" name="senha" id="senha-cadastro">
 
                                     <label for="senha_novamente">Senha novamente</label>
                                     <input type="password" name="senha_novamente" id="senha_novamente">
                                 </div>
-                                <button>Confirmar cadastro</button>
+                                <button type="submit" class="botao-conf-cadastro bt-c">Confirmar cadastro</button>
                             </div>
                         </div>
                 </div>
             </form>
         </div>
     </section>
+    <script src="js/login.js"></script>
 </body>
 </html>
