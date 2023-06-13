@@ -50,10 +50,13 @@ class ExercicioController extends Controller
 
     public function destroy($id)
     {
-        $exercicio = Exercicio::findOrFail($id);
-        
-        $exercicio->delete();
+        try {
+            $exercicio = Exercicio::findOrFail($id);
+            $exercicio->delete();
 
-        return redirect()->route('exercicio.index');
+            return redirect()->route('exercicio.index');
+        } catch (ModelNotFoundException $erro) {
+            return redirect()->route('exercicio.index')->with('Error', 'O exercício não foi encontrado.');
+        }
     }
 }
