@@ -24,13 +24,13 @@
                 </div>
                 <div class="div-button">
                     <button type="submit" class="botao-login bt-l">Login</button>
-                    <button class="botao-cadastrar bt-l" id="botao-cadastrar" onclick="toggleDivs()">Cadastrar</button>
+                    <button class="botao-cadastrar bt-l" id="botao-cadastrar" onclick="showForm()">Cadastrar</button>
                 </div>
             </div>
             </form>
         </div>
         <div class="div-cadastro-form" id="div-cadastro-form">
-            <form action="" class="cadastro-form" id="cadastro-form">
+            <form action="" class="cadastro-form" id="cadastro-form" style="display:none;">
                 @csrf
                 <div class="div-teste-cadastro">
                     <h2>cadastro</h2>
@@ -73,6 +73,7 @@
                                     <input type="password" name="senha_novamente" id="senha_novamente">
                                 </div>
                                 <button type="submit" class="botao-conf-cadastro bt-c">Confirmar cadastro</button>
+                                <button type="submit" class="bt-c">Login</button>
                             </div>
                         </div>
                 </div>
