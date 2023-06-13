@@ -10,7 +10,7 @@
 <body>
     <section class="container">
         <div class="div-login-form" id="div-login-form">
-            <form action="{{route('login.act')}}" method="post" class="login-form" id="login-form">
+            <form action="{{route('login.act')}}" method="post" class="form login-form" id="login-form">
             @csrf
             <div class="div-teste-login ci">
                 <h2>login</h2>
@@ -30,7 +30,7 @@
             </form>
         </div>
         <div class="div-cadastro-form" id="div-cadastro-form">
-            <form action="" class="cadastro-form" id="cadastro-form" style="display:none;">
+            <form action="" class="form cadastro-form" id="cadastro-form" style="display:none;">
                 @csrf
                 <div class="div-teste-cadastro">
                     <h2>cadastro</h2>
@@ -73,7 +73,7 @@
                                     <input type="password" name="senha_novamente" id="senha_novamente">
                                 </div>
                                 <button type="submit" class="botao-conf-cadastro bt-c">Confirmar cadastro</button>
-                                <button type="submit" class="bt-c">Login</button>
+                                <button type="submit" class="bt-c" onclick="slideToLogin()">Login</button>
                             </div>
                         </div>
                 </div>

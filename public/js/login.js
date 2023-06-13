@@ -20,12 +20,28 @@ function toggleDivs() {
 function showForm() {
   document.getElementById("login-form").style.display = "none";
   document.getElementById("cadastro-form").style.display = "block";
+  slideToRegister();
 }
 document.getElementById("botao-cadastrar").addEventListener("click", function(event) {
   event.preventDefault(); // Impede o comportamento padrão do botão
   showForm();
 });
 
+  function slideToRegister() {
+    var loginForm = document.querySelector('.login-form');
+    var registerForm = document.querySelector('.cadastro-form');
+
+    loginForm.style.transform = 'translateX(-100%)';
+    registerForm.style.transform = 'translateX(0)';
+  }
+
+  function slideToLogin() {
+    var loginForm = document.querySelector('.login-form');
+    var registerForm = document.querySelector('.cadastro-form');
+
+    loginForm.style.transform = 'translateX(0)';
+    registerForm.style.transform = 'translateX(100%)';
+  }
 
 
 
