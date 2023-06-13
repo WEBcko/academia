@@ -13,7 +13,7 @@
             <form action="{{route('login.act')}}" method="post" class="login-form" id="login-form">
             @csrf
             <div class="div-teste-login ci">
-                <h2>login</h2>
+                <h1>login</h1>
                 <div>
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email-login">

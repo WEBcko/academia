@@ -9,9 +9,9 @@ body{
 }
 
 h1{
-    color: blue;
+    color: rgb(255, 255, 255);
+    font-size: 35px;
 }
-
 
 input{
     width: 90%;
@@ -21,7 +21,6 @@ input{
 a{
     text-decoration: none;
 }
-
 
 .bt-l{
     width: 100px;
@@ -48,7 +47,15 @@ a{
 }
 
 button:hover{
-    background-color: #f00;
+    background-color: rgba(54, 49, 49, 0.548);
+}
+
+.botao-login{
+    background-color: #00ADAD;
+}
+
+.botao-conf-cadastro{
+    background-color: ;
 }
 
 .container{
@@ -75,7 +82,7 @@ button:hover{
 .div-login-form{
     width: 35%;
     height: 90%;
-    background-color: #39b57b;
+    background-color: #236F5C;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -188,7 +195,7 @@ button:hover{
     display: flex;
     height: 90%;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 
